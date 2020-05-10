@@ -2,57 +2,29 @@
 
 namespace Test5
 {
-    class Program
+    class add
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter Number 1");
+            int a, b;
+            Console.WriteLine("enter 1st num= ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter 2nd num= ");
+            b = int.Parse(Console.ReadLine());
 
-            int num1;
-            bool flag = false;
-            flag = int.TryParse(Console.ReadLine(), out num1);
+            int result = a - b;
 
-            if (num1 > 5)
-            {
-                Console.WriteLine("Number 1  is a invalid number");
-                return;
-                
-            }
-            flag = false;
-            int a = num1;
-
-            int num2;
-            Console.WriteLine("Please enter Number 2");
-            flag = int.TryParse(Console.ReadLine(), out num2);
-
-
-                    if (num2 != 5)
+           if (a < 5)
 
             {
-                Console.WriteLine("Number 2  is a invalid number");
-                return;
+                Console.WriteLine(" 1st num is invalid");
             }
-            int b = num2;
-
-            if (num1 < num2)
+           if (b != 5)
             {
-                a = num2;
-                b = num1;
+                Console.WriteLine("2nd num is invalid");
             }
-
-
-
-            int result = 0;
-
-            while (b != 0)
-            {
-                result = result + a;
-                b--;
-
-            }
-
-            Console.WriteLine("multiplication of {0} and {1}  is  {2}", num1, num2, result);
+            Console.WriteLine("Subtraction is: " + result);
+            Console.ReadKey();
         }
-
     }
 }
