@@ -12,11 +12,11 @@ namespace Test5
             bool flag = false;
             flag = int.TryParse(Console.ReadLine(), out num1);
 
-            if (flag == false)
+            if (num1 > 5)
             {
                 Console.WriteLine("Number 1  is a invalid number");
                 return;
-
+                
             }
             flag = false;
             int a = num1;
@@ -25,7 +25,9 @@ namespace Test5
             Console.WriteLine("Please enter Number 2");
             flag = int.TryParse(Console.ReadLine(), out num2);
 
-            if (flag == false)
+
+                    if (num2 != 5)
+
             {
                 Console.WriteLine("Number 2  is a invalid number");
                 return;
